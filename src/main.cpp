@@ -19,7 +19,7 @@ glm::vec3 SphericalToCartesian(float radius, float theta, float phi);
 void setWindowIcon(GLFWwindow* window, const char* filePath);
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height);
-void UpdatePlanets(float deltaTime);
+void UpdatePlanets(double deltaTime);
 
 glm::vec3 SphericalToCartesian(float radius, float theta, float phi)
 {
@@ -30,15 +30,18 @@ glm::vec3 SphericalToCartesian(float radius, float theta, float phi)
     return glm::vec3(x, y, z);
 }
 
-struct Planets{
-    float radius;
-    glm::vec3 position;
-    glm::vec3 color;
-    float speed;
-    float currAngle;
-    float orbitRad;
-};
+constexpr double G = 39.47841760435743; // AU^3 / (solar mass * year^2)
+constexpr double SIMULATION_DAYS_PER_SECOND = 30.0;
+constexpr double DAYS_PER_YEAR = 365.25;
 
+struct Planets {
+    float radius;
+    glm::dvec3 position;
+    glm::vec3 color;
+    double mass;
+    glm::dvec3 velocity{0.0};
+    glm::dvec3 acceleration{0.0};
+};
 std::vector<Planets> planets;
 
 glm::vec3 color;
@@ -80,17 +83,53 @@ int main()
     double currTime = 0.0;
     double diff = 0.0;
     unsigned int counter = 0;
-
     planets = {
-        {5.00f, { 0.00f, 0.0f, 0.0f}, {1.00f, 0.75f, 0.15f}, 0.00f, 0.2f, 0.0f},
-        {0.25f, { 7.50f, 0.0f, 0.0f}, {0.65f, 0.65f, 0.65f}, 3.0f, 1.2f, 10.0f},
-        {0.60f, { 9.50f, 0.0f, 0.0f}, {0.90f, 0.70f, 0.50f}, 2.2f, 0.8f, 15.0f},
-        {0.30f, {12.00f, 0.0f, 0.0f}, {0.20f, 0.50f, 1.00f}, 1.5f, 1.4f, 21.0f},
-        {0.34f, {14.50f, 0.0f, 0.0f}, {0.90f, 0.35f, 0.20f}, 1.0f, 2.3f, 28.0f},
-        {2.20f, {19.00f, 0.0f, 0.0f}, {0.80f, 0.65f, 0.50f}, 0.6f, 3.4f, 37.0f},
-        {1.80f, {25.00f, 0.0f, 0.0f}, {0.85f, 0.75f, 0.55f}, 0.4f, 5.0f, 48.0f},
-        {1.00f, {31.00f, 0.0f, 0.0f}, {0.50f, 0.80f, 0.90f}, 0.2f, 1.5f, 60.0f},
-        {0.95f, {36.00f, 0.0f, 0.0f}, {0.25f, 0.40f, 0.90f}, 0.1f, 3.5f, 72.0f}
+        // Visual radius, position (AU), color, mass (solar masses), velocity (AU/year), acceleration
+
+        // Sun
+        {0.20f, {0.0f, 0.0f, 0.0f},
+        {1.00f, 0.75f, 0.15f},
+        1.0, {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f, 0.0f}},
+
+        // Mercury
+        {0.035f, {0.387f, 0.0f, 0.0f},
+        {0.65f, 0.65f, 0.65f},
+        1.660e-7, {0.0f, 0.0f, 10.08f}, {0.0f, 0.0f, 0.0f}},
+
+        // Venus
+        {0.045f, {0.723f, 0.0f, 0.0f},
+        {0.90f, 0.70f, 0.50f},
+        2.448e-6, {0.0f, 0.0f, 7.38f}, {0.0f, 0.0f, 0.0f}},
+
+        // Earth
+        {0.05f, {1.000f, 0.0f, 0.0f},
+        {0.20f, 0.50f, 1.00f},
+        3.003e-6, {0.0f, 0.0f, 6.28f}, {0.0f, 0.0f, 0.0f}},
+
+        // Mars
+        {0.04f, {1.524f, 0.0f, 0.0f},
+        {0.90f, 0.35f, 0.20f},
+        3.227e-7, {0.0f, 0.0f, 5.09f}, {0.0f, 0.0f, 0.0f}},
+
+        // Jupiter
+        {0.12f, {5.203f, 0.0f, 0.0f},
+        {0.80f, 0.65f, 0.50f},
+        9.545e-4, {0.0f, 0.0f, 2.75f}, {0.0f, 0.0f, 0.0f}},
+
+        // Saturn
+        {0.10f, {9.537f, 0.0f, 0.0f},
+        {0.85f, 0.75f, 0.55f},
+        2.858e-4, {0.0f, 0.0f, 2.03f}, {0.0f, 0.0f, 0.0f}},
+
+        // Uranus
+        {0.075f, {19.191f, 0.0f, 0.0f},
+        {0.50f, 0.80f, 0.90f},
+        4.366e-5, {0.0f, 0.0f, 1.43f}, {0.0f, 0.0f, 0.0f}},
+
+        // Neptune
+        {0.075f, {30.069f, 0.0f, 0.0f},
+        {0.25f, 0.40f, 0.90f},
+        5.151e-5, {0.0f, 0.0f, 1.14f}, {0.0f, 0.0f, 0.0f}}
     };
     std::vector<float> vertices = Draw(24);
     std::vector<unsigned int> indices;
@@ -135,15 +174,33 @@ int main()
         shaderProgram.Activate();
         camera.Matrix(45.0f, 0.1f, 100.0f, shaderProgram, "camMatrix");
         texture.Bind();
-        UpdatePlanets(deltaTime);
+        double simulationDeltaTime =
+            deltaTime * SIMULATION_DAYS_PER_SECOND / DAYS_PER_YEAR;
+        constexpr int SUBSTEPS = 10;
+
+        double subDeltaTime = simulationDeltaTime / SUBSTEPS;
+
+        for (int i = 0; i < SUBSTEPS; i++)
+        {
+            UpdatePlanets(subDeltaTime);
+        }
         for (const Planets& planet : planets)
         {
             glm::mat4 model(1.0f);
 
-            model = glm::translate(model, planet.position);
-            model = glm::scale(model, glm::vec3(planet.radius));
+            model = glm::translate(
+                model,
+                glm::vec3(planet.position)
+            );
+
+            model = glm::scale(
+                model,
+                glm::vec3(planet.radius)
+            );
+
             shaderProgram.SetMat4("model", model);
             shaderProgram.SetVec3("objectColor", planet.color);
+
             sphere.Draw();
         }
         glfwSwapBuffers(window);
@@ -224,20 +281,42 @@ std::vector<float> Draw(int res)
     return vertices;
 }
 
-void UpdatePlanets(float deltaTime) {
-    glm::vec3 SunPos = planets[0].position;
-    for (int i = 1; i < planets.size(); ++i) {
-        auto& planet = planets[i];
-        
-        planet.currAngle += (planet.speed * deltaTime);
-        if (planet.currAngle > glm::two_pi<float>()) {
-            planet.currAngle -= glm::two_pi<float>();
+void UpdatePlanets(double deltaTime)
+{
+    for (auto& planet : planets)
+    {
+        planet.acceleration = glm::dvec3(0.0);
+    }
+    for (size_t i = 0; i < planets.size(); i++)
+    {
+        for (size_t j = i + 1; j < planets.size(); j++)
+        {
+            glm::dvec3 direction =
+                planets[j].position - planets[i].position;
+
+            double distance = glm::length(direction);
+
+            if (distance < 1e-10)
+                continue;
+
+            glm::dvec3 unitDirection = direction / distance;
+
+            double force =
+                G * planets[i].mass * planets[j].mass /
+                (distance * distance);
+
+            glm::dvec3 forceVector = unitDirection * force;
+
+            planets[i].acceleration +=
+                forceVector / planets[i].mass;
+
+            planets[j].acceleration -=
+                forceVector / planets[j].mass;
         }
-        
-        planet.position.x = glm::cos(planet.currAngle) * planet.orbitRad + SunPos.x;
-        planet.position.y = SunPos.y;
-        planet.position.z = glm::sin(planet.currAngle) * planet.orbitRad + SunPos.z;
+    }
+    for (auto& planet : planets)
+    {
+        planet.velocity += planet.acceleration * deltaTime;
+        planet.position += planet.velocity * deltaTime;
     }
 }
-
-
