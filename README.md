@@ -8,7 +8,7 @@ A simple 3D solar system simulation built using C++ and OpenGL.
 ![Solar System Overview](screenshots/top.png)
 
 ### Planetary Orbits
-![Planetary Orbits](screenshots/sideOrbit.png)
+![Planetary Orbits](screenshots/SideOrbit.png)
 
 ## Overview
 
