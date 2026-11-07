@@ -1,0 +1,3 @@
+libs/** linguist-vendored
+build/** linguist-vendored
+shaders/** linguist-generated

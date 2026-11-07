@@ -1,0 +1,188 @@
+[
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\main.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\main.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/main.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_C.rsp -g -o CMakeFiles\\Planets3D.dir\\libs\\glad\\src\\gl.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glad\\src\\gl.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glad/src/gl.c",
+  "output": "CMakeFiles/Planets3D.dir/libs/glad/src/gl.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\VAO.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\VAO.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/VAO.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/VAO.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\VBO.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\VBO.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/VBO.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/VBO.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\EBO.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\EBO.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/EBO.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/EBO.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\ShaderClass.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\ShaderClass.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/ShaderClass.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/ShaderClass.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\Camera.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\Camera.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/Camera.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/Camera.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\Mesh.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\Mesh.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/Mesh.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/Mesh.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\stb.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\stb.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/stb.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/stb.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGLM_ENABLE_EXPERIMENTAL @CMakeFiles\\Planets3D.dir\\includes_CXX.rsp -g -std=c++20 -o CMakeFiles\\Planets3D.dir\\src\\Texture.cpp.obj -c C:\\A_Manthan\\C++\\Planets3D\\src\\Texture.cpp",
+  "file": "C:/A_Manthan/C++/Planets3D/src/Texture.cpp",
+  "output": "CMakeFiles/Planets3D.dir/src/Texture.cpp.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\context.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/context.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/context.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\init.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\init.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/init.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/init.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\input.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\input.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/input.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/input.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\monitor.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\monitor.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/monitor.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\platform.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\platform.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/platform.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/platform.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\vulkan.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/vulkan.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\window.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\window.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/window.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/window.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\egl_context.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/egl_context.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\osmesa_context.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/osmesa_context.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_init.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\null_init.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/null_init.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_monitor.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\null_monitor.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/null_monitor.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_window.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\null_window.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/null_window.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_joystick.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\null_joystick.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/null_joystick.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_module.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_module.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_module.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_time.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_time.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_thread.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_thread.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_init.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_init.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_joystick.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_joystick.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_monitor.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_monitor.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\win32_window.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/win32_window.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+},
+{
+  "directory": "C:/A_Manthan/C++/Planets3D/build/libs/glfw/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -D_GLFW_WIN32 -D_UNICODE @CMakeFiles\\glfw.dir\\includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c C:\\A_Manthan\\C++\\Planets3D\\libs\\glfw\\src\\wgl_context.c",
+  "file": "C:/A_Manthan/C++/Planets3D/libs/glfw/src/wgl_context.c",
+  "output": "libs/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+}
+]

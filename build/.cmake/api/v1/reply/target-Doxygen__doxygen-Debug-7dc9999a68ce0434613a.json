@@ -1,0 +1,68 @@
+{
+	"abstract" : true,
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/mingw64/bin/doxygen.exe"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_Doxygen_find_doxygen",
+			"find_package"
+		],
+		"files" : 
+		[
+			"C:/mingw64/share/cmake-4.4/Modules/FindDoxygen.cmake",
+			"libs/glfw/docs/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"file" : 0,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 956,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 797,
+				"parent" : 3
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	},
+	"id" : "Doxygen::doxygen::@f9fc65861edd6e117385",
+	"imported" : true,
+	"name" : "Doxygen::doxygen",
+	"nameOnDisk" : "doxygen.exe",
+	"paths" : 
+	{
+		"build" : "libs/glfw/docs",
+		"source" : "libs/glfw/docs"
+	},
+	"sources" : [],
+	"type" : "EXECUTABLE"
+}

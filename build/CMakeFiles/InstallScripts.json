@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/A_Manthan/C++/Planets3D/build/cmake_install.cmake",
+		"C:/A_Manthan/C++/Planets3D/build/libs/glfw/cmake_install.cmake",
+		"C:/A_Manthan/C++/Planets3D/build/libs/glfw/src/cmake_install.cmake",
+		"C:/A_Manthan/C++/Planets3D/build/libs/glfw/docs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
