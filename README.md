@@ -12,16 +12,16 @@ A simple 3D solar system simulation built using C++ and OpenGL.
 
 ## Overview
 
-This project visualizes the Sun and planets in a 3D environment. It uses mathematical transformations and trigonometric functions to simulate planetary rotation and revolution.
+This project visualizes the Sun and planets in a 3D environment. Their motion is calculated from their mutual gravitational attraction, so every body—including the Sun—can move in response to the others.
 
-The simulation focuses on visual representation rather than physically accurate orbital mechanics. Planetary movement is calculated using sine and cosine functions, without gravitational calculations.
+The simulation is an educational approximation rather than a precision ephemeris. Orbital paths emerge from the bodies' initial positions, masses, and velocities; they are not prescribed with sine and cosine functions.
 
 ## Features
 
 - Procedurally generated 3D spheres.
 - Multiple planets with individual sizes and colours.
-- Mathematical orbital movement using sine and cosine.
-- Independent orbital and rotational speeds.
+- Pairwise Newtonian gravity between simulated bodies.
+- Adjustable initial positions, masses, and velocities.
 - 3D camera controls.
 - Real-time rendering using OpenGL.
 
@@ -35,14 +35,15 @@ The simulation focuses on visual representation rather than physically accurate 
 
 ## How It Works
 
-Planetary positions are calculated using trigonometric functions:
+Positions are measured in astronomical units (AU), masses in solar masses, and velocities in AU per year. The gravitational constant is expressed in the matching units:
 
 ```cpp
-x = radius * cos(angle);
-z = radius * sin(angle);
+G = 4 * pi^2 AU^3 / (solar mass * year^2)
 ```
 
-The angle is updated over time using angular velocity and frame delta time.
+At each simulation step, the program calculates the gravitational force between every pair of bodies and derives their accelerations from those forces. Velocities and positions are then advanced using a semi-implicit Euler step. Each rendered frame is divided into 10 substeps.
+
+Simulation time advances at 30 simulated days per real second. Initial velocities are important: gravity alone pulls bodies together, while a suitable sideways velocity is needed for an orbit. Since gravity is mutual, a planet also causes the Sun to move; both orbit their shared center of mass.
 
 Each planet shares the same sphere mesh, with individual model matrices controlling its position and scale.
 
@@ -53,11 +54,12 @@ This is an educational graphics programming project intended to explore:
 - 3D coordinate systems
 - Spherical geometry
 - Model transformations
-- Trigonometry
+- Newtonian gravitation and orbital motion
+- Numerical integration
 - Procedural mesh generation
 - Real-time rendering
 
-The simulation does not implement gravitational physics or physically accurate orbital mechanics.
+The simulation is not intended for precision scientific use. It uses a simple numerical integrator and a visual representation whose sphere sizes are not to scale.
 
 ## Status
 

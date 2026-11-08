@@ -89,7 +89,7 @@ int main()
         // Sun
         {0.20f, {0.0f, 0.0f, 0.0f},
         {1.00f, 0.75f, 0.15f},
-        1.0, {0.0f, 0.0f, 0.0f}, {0.0f, 0.0f, 0.0f}},
+        1.0f, {0.0f, 0.0f, 0.0f}},
 
         // Mercury
         {0.035f, {0.387f, 0.0f, 0.0f},
@@ -131,6 +131,8 @@ int main()
         {0.25f, 0.40f, 0.90f},
         5.151e-5, {0.0f, 0.0f, 1.14f}, {0.0f, 0.0f, 0.0f}}
     };
+
+
     std::vector<float> vertices = Draw(24);
     std::vector<unsigned int> indices;
     
@@ -184,6 +186,7 @@ int main()
         {
             UpdatePlanets(subDeltaTime);
         }
+        std::cout << planets[0].position.z << '\n';
         for (const Planets& planet : planets)
         {
             glm::mat4 model(1.0f);
@@ -295,10 +298,6 @@ void UpdatePlanets(double deltaTime)
                 planets[j].position - planets[i].position;
 
             double distance = glm::length(direction);
-
-            if (distance < 1e-10)
-                continue;
-
             glm::dvec3 unitDirection = direction / distance;
 
             double force =
